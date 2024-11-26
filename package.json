@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint",
     "pkg:build": "pnpm -F next-actuator run build",
-    "pkg:release": "semantic-release -e ./packages/next-actuator/release.config.js",
+    "pkg:release": "pnpm -F next-actuator run release",
     "postinstall": "lefthook install"
   },
   "devDependencies": {
@@ -22,7 +22,6 @@
     "globals": "^15.12.0",
     "lefthook": "^1.8.4",
     "typescript": "^5",
-    "typescript-eslint": "^8.15.0",
-    "semantic-release": "^24.2.0"
+    "typescript-eslint": "^8.15.0"
   }
 }
