@@ -22,9 +22,6 @@ importers:
       lefthook:
         specifier: ^1.8.4
         version: 1.8.4
-      semantic-release:
-        specifier: ^24.2.0
-        version: 24.2.0(typescript@5.7.2)
       typescript:
         specifier: ^5
         version: 5.7.2
@@ -75,6 +72,9 @@ importers:
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
+      semantic-release:
+        specifier: ^24.2.0
+        version: 24.2.0(typescript@5.7.2)
 
 packages:
 
