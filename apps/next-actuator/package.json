@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "next-actuator-app",
+  "version": "0.0.0",
+  "author": "Ross MacPhee (https://ross.software)",
+  "description": "A fully composable actuator implementation for Next.js projects",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build"
+  },
+  "dependencies": {
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "next": "15.0.3",
+    "next-actuator": "workspace:*",
+    "properties-reader": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/properties-reader": "^2.1.3"
+  }
+}
