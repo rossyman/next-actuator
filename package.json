@@ -10,7 +10,7 @@
   },
   "scripts": {
     "lint": "eslint",
-    "pkg:build": "pnpm build -F next-actuator",
+    "pkg:build": "pnpm -F next-actuator run build",
     "pkg:release": "semantic-release -e ./packages/next-actuator/release.config.js",
     "postinstall": "lefthook install"
   },

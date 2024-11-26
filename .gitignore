@@ -17,3 +17,4 @@ yarn-error.log*
 
 # Build
 **/dist/
+/packages/next-actuator/README.md

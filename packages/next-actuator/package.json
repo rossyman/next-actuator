@@ -37,7 +37,7 @@
   },
   "scripts": {
     "build": "pnpm clean && tsc && cp ../../README.md ./",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist && rm -rf ./README.md"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"
