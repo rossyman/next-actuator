@@ -1,0 +1,51 @@
+{
+  "type": "module",
+  "name": "next-actuator",
+  "version": "0.0.0-semantic-release",
+  "author": "Ross MacPhee (https://ross.software)",
+  "description": "A fully composable actuator implementation for Next.js projects",
+  "homepage": "https://github.com/rossyman/next-actuator#readme",
+  "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rossyman/next-actuator.git",
+    "directory": "packages/next-actuator"
+  },
+  "bugs": {
+    "url": "https://github.com/rossyman/next-actuator/issues"
+  },
+  "keywords": [
+    "next",
+    "next.js",
+    "actuator",
+    "liveliness",
+    "monitor",
+    "health"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "pnpm clean && tsc && cp ../../README.md ./",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "peerDependencies": {
+    "next": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12"
+  }
+}
