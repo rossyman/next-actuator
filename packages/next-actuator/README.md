@@ -1,15 +1,21 @@
 # Next Actuator
 
+[![Version](https://img.shields.io/npm/v/next-actuator?logo=npm&style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/next-actuator)
+[![Status](https://img.shields.io/github/actions/workflow/status/rossyman/next-actuator/release.yaml?logo=githubactions&logoColor=fff&style=flat&colorA=000000&colorB=000000)](https://github.com/rossyman/next-actuator/actions)
+[![Semantic Release: conventional](https://img.shields.io/badge/semantic--release-conventional-e10079?logo=semantic-release&style=flat&colorA=000000&colorB=000000)](https://github.com/semantic-release/semantic-release)
+[![Next.js Version](https://img.shields.io/npm/dependency-version/next-actuator/peer/next?logo=nextdotjs&style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/next-actuator)
+
 Next actuator provides a suite of production-ready observability endpoints to monitor and audit the health, metrics, and
-general status of your application. The library is loosely inspired by Spring Actuator.
+general status of your application. The library is loosely inspired by
+[Spring Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html).
 
 ## Installation
 
 ```bash
-  npm install next-actuator
-  bun add next-actuator
-  pnpm add next-actuator
-  yarn add next-actuator
+npm install next-actuator
+yarn add next-actuator
+pnpm add next-actuator
+bun add next-actuator
 ```
 
 ## Usage
