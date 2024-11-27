@@ -9,8 +9,8 @@
     "build": "next build"
   },
   "dependencies": {
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "19.0.0-rc.1",
+    "react-dom": "19.0.0-rc.1",
     "next": "15.0.3",
     "next-actuator": "workspace:*",
     "properties-reader": "^2.3.0"
