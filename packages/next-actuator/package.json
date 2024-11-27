@@ -7,6 +7,10 @@
   "homepage": "https://github.com/rossyman/next-actuator#readme",
   "license": "MIT",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rossyman/next-actuator.git",
@@ -37,17 +41,17 @@
   },
   "scripts": {
     "build": "pnpm clean && tsc",
+    "verify": "npm install --package-lock-only && npm audit signatures",
     "release": "semantic-release",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist && rm -rf ./package-lock.json"
   },
   "dependencies": {
     "lodash-es": "^4.17.21"
   },
   "peerDependencies": {
-    "next": ">=14.0.0"
+    "next": ">=14.2.10"
   },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.12",
-    "semantic-release": "^24.2.0"
+    "@types/lodash-es": "^4.17.12"
   }
 }
