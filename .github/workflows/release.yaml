@@ -42,7 +42,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Verify provenance
-        run: pkg:verify
+        run: pnpm pkg:verify
 
       - name: Build next-actuator
         run: pnpm pkg:build
