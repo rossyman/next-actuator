@@ -16,6 +16,7 @@
     "postinstall": "lefthook install"
   },
   "devDependencies": {
+    "@types/node": "^22",
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.15.0",
