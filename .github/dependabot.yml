@@ -1,0 +1,44 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    assignees:
+      - rossyman
+    directory: "/packages/next-actuator"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "fix"
+      prefix-development: "chore"
+      include: "scope"
+    versioning-strategy: increase
+    groups:
+      fixes:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      patches:
+        applies-to: version-updates
+        update-types:
+          - "patch"
+          - "minor"
+        patterns:
+          - "*"
+      breaking:
+        applies-to: version-updates
+        update-types:
+          - "major"
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    assignees:
+      - rossyman
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    groups:
+      dependencies:
+        patterns:
+          - "*"
