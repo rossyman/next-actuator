@@ -1,4 +1,4 @@
-import { map, sum } from 'lodash-es'
+import { sum } from 'es-toolkit'
 import { notFound } from 'next/navigation'
 import type { NextRequest } from 'next/server'
 import { isDimensionalMetric, type Metric } from '../types/metric'
@@ -17,11 +17,10 @@ const evaluateMetric = async (name: string, metric: Metric, dimension: string | 
     return createMetric(name, metric.description, metric.baseUnit, await metric.value(), [])
   }
 
-  const availableDimensions = Object.keys(metric.dimensions)
-
   if (!dimension) {
-    const aggregateValue = sum(await Promise.all(map(metric.dimensions, (dim) => dim.value())))
-    return createMetric(name, metric.description, metric.baseUnit, aggregateValue, availableDimensions)
+    const aggregatePromises = Object.values(metric.dimensions).map(dimension => dimension.value())
+    const aggregateValue = sum(await Promise.all(aggregatePromises))
+    return createMetric(name, metric.description, metric.baseUnit, aggregateValue, Object.keys(metric.dimensions))
   }
 
   const foundDimension = metric.dimensions[dimension]

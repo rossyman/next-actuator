@@ -1,4 +1,3 @@
-import { map } from 'lodash-es'
 import type { NextRequest } from 'next/server'
 import type { NextActuatorConfig } from '../types/next-actuator-config'
 import type { ValueOf } from '../types/value-of'
@@ -13,8 +12,11 @@ const evaluateComponent = async (req: NextRequest, name: string, component: Valu
 
 export const handleHealth = async (req: NextRequest, config: NextActuatorConfig): Promise<Response> => {
 
-  const results = await Promise
-    .all(map(config.components, (component, name) => evaluateComponent(req, name, component)))
+  const componentEvaluationPromises = Object
+    .entries(config.components)
+    .map(([ name, component ]) => evaluateComponent(req, name, component))
+
+  const results = await Promise.all(componentEvaluationPromises)
 
   const hasNormalDown = results.some(([name, result]) =>
     result.status === 'DOWN' && config.components[name].strategy !== 'DEGRADED'

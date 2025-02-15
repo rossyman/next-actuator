@@ -40,18 +40,15 @@
     }
   },
   "scripts": {
-    "build": "pnpm clean && tsc",
+    "build": "pnpm clean && tsc -b",
     "verify": "npm install --package-lock-only && npm audit signatures",
     "release": "semantic-release",
     "clean": "rm -rf ./dist && rm -rf ./package-lock.json"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
+    "es-toolkit": "^1.32.0"
   },
   "peerDependencies": {
-    "next": ">=14.2.10"
-  },
-  "devDependencies": {
-    "@types/lodash-es": "^4.17.12"
+    "next": "^14 || ^15"
   }
 }

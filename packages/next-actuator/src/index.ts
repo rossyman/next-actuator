@@ -1,4 +1,4 @@
-import { merge } from 'lodash-es'
+import { merge } from 'es-toolkit'
 import { notFound } from 'next/navigation'
 import type { NextRequest } from 'next/server'
 import { handleHealth } from './handlers/handle-health'
@@ -33,7 +33,7 @@ export const createNextActuator = (actuatorConfig?: Optional<NextActuatorConfig>
         info: '/info'
       }
     },
-    actuatorConfig
+    actuatorConfig ?? {}
   )
 
   const handlers: [string, (req: NextRequest, config: NextActuatorConfig) => Promise<Response>][] = []

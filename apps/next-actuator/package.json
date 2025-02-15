@@ -9,15 +9,15 @@
     "build": "next build"
   },
   "dependencies": {
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "^15.1.7",
     "next-actuator": "workspace:*",
     "properties-reader": "^2.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@types/properties-reader": "^2.1.3"
   }
 }
