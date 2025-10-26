@@ -46,9 +46,9 @@
     "clean": "rm -rf ./dist && rm -rf ./package-lock.json"
   },
   "dependencies": {
-    "es-toolkit": "^1.32.0"
+    "es-toolkit": "^1.41.0"
   },
   "peerDependencies": {
-    "next": "^14 || ^15"
+    "next": "^14 || ^15 || ^16"
   }
 }
